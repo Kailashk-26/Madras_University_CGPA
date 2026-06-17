@@ -1,0 +1,349 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.disclaimer{
+    padding: 12px;
+    margin: 12px auto;
+    background-color: rgb(233, 233, 182);
+    border-radius: 10px;
+    border:1px dashed black ;
+    max-width: 850px;
+}
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-trigger {
+  color: #36b;
+  text-decoration: none;
+  border-bottom: 1px dotted #36b;
+  cursor: pointer;
+}
+
+
+.hover-card {
+  display: none; 
+  position: absolute;
+  bottom: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  background-color: #ffffff;
+  border: 1px solid #a2a9b1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  z-index: 10;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #202122;
+  text-align: left;
+}
+
+@media (hover: hover) {
+  .hover-container:hover .hover-card {
+    display: block !important;
+  }
+}
+
+@media (hover: none) {
+  .hover-container:active .hover-card,
+  .hover-container:focus-within .hover-card {
+    display: block !important;
+  }
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.card-content strong {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  margin: 0 0 8px 0;
+  color: #444;
+}
+@media (max-width: 600px) {
+  .hover-card {
+    width: 280px;     
+    left:70%;     
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+
+  .card-content strong {
+    font-size: 14px;  /* Standard desktop sizes */
+    margin-bottom: 5px;
+  }
+
+  .card-content p {
+    font-size: 12px;
+  }
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+.semester-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #fafafa;
+}
+.semester-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.semester-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+.part-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+    width: 100%;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    min-width: 0;
+}
+label {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+button {
+    cursor: pointer;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+footer{
+    display: block;
+    width: 10em;;
+    margin : 18px auto;
+}
+.btn-add-part {
+    background-color: #eaf2f8;
+    color: #2980b9;
+    margin-top: 10px;
+}
+.btn-add-part:hover {
+    background-color: #d4e6f1;
+}
+.btn-delete {
+    background-color: #fadbd8;
+    color: #c0392b;
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+.btn-delete:hover {
+    background-color: #f5b7b1;
+}
+.btn-add-sem {
+    background-color: #2ecc71;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+.btn-add-sem:hover {
+    background-color: #27ae60;
+}
+.btn-calc {
+    background-color: #3498db;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.btn-calc:hover {
+    background-color: #2980b9;
+}
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e8f8f5;
+    border-left: 5px solid #2ecc71;
+    border-radius: 4px;
+    display: none;
+}
+.result-box h2 {
+    margin: 0 0 10px 0;
+    color: #16a085;
+}
+.sem-summary {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 14px;
+    }
+
+    .disclaimer {
+        padding: 10px;
+        margin: 8px auto;
+        font-size: 0.85rem;
+    }
+
+    .disclaimer h3 {
+        margin: 0 0 6px;
+        font-size: 1rem;
+    }
+
+    .disclaimer p {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.35rem;
+        margin-bottom: 18px;
+    }
+
+    .semester-card {
+        padding: 10px;
+        margin-bottom: 16px;
+    }
+
+    .semester-header {
+        gap: 10px;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+
+    .semester-title {
+        font-size: 1rem;
+    }
+
+    .part-row {
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    label {
+        font-size: 0.68rem;
+        margin-bottom: 4px;
+        white-space: nowrap;
+    }
+
+    input {
+        padding: 7px 6px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 7px 10px;
+        font-size: 0.82rem;
+    }
+
+    .btn-delete {
+        align-self: flex-end;
+        margin-top: 0;
+        padding: 7px 9px;
+    }
+
+    .btn-add-part {
+        margin-top: 6px;
+    }
+
+    .btn-add-sem {
+        padding: 10px;
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+    .btn-calc {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .result-box {
+        margin-top: 20px;
+        padding: 14px;
+    }
+
+    .result-box h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 10px;
+    }
+
+    .semester-card {
+        padding: 8px;
+    }
+
+    .part-row {
+        gap: 4px;
+    }
+
+    label {
+        font-size: 0.62rem;
+    }
+
+    input {
+        padding: 6px 4px;
+        font-size: 0.82rem;
+    }
+
+    .btn-delete {
+        min-width: 28px;
+        padding: 6px 7px;
+        font-size: 0.75rem;
+    }
+}

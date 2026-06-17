@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madras University CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="disclaimer">
+        <h3>⚠Note:</h3> <div class="disclaimer-text">
+            This is <strong>not</strong> the official Madras University website, It just follows the
+            
+            <div class="hover-container">
+                <a href="#" target="_blank" rel="noopener" class="hover-trigger">Madras University's formula</a>
+                <div class="hover-card">
+                    <div class="card-content">
+                        <strong>CGPA/GPA</strong>
+                        <p>Sum of Multiplication of grade points by credits / Sum of credits</p>
+                    </div>
+                </div>
+            </div>
+            to calculate CGPA/GPA
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Madras University CGPA Calculator</h1>
+        
+        <div id="semesters-container">
+        </div>
+
+        <button class="btn-add-sem" onclick="addSemester()">+ Add Semester</button>
+        <button class="btn-calc" onclick="calculateCGPA()">Calculate CGPA</button>
+
+        <div class="result-box" id="result-box">
+            <h2>Calculation Results</h2>
+            <div id="cgpa-output" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;"></div>
+            <div id="sem-breakdown"></div>
+        </div>
+    </div>
+
+    <footer>Created by Kailash K</footer>
+
+    <script src="index.js" defer></script>
+
+</body>
+</html>
